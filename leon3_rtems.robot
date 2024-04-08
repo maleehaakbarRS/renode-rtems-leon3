@@ -14,7 +14,7 @@ ${PROMPT}                     SHLL [/] #
 Prepare Sample
     [Arguments]  ${sample_name}
 
-    Execute Command           $prom="${CURDIR}/grlib-gpl-2021.2-b4267/software/leon3/prom.bin"
+    Execute Command           $prom="${CURDIR}/grlib-gpl-2024.1-b4291/software/leon3/prom.bin"
     Execute Command           $bin="${CURDIR}/rcc-1.3.0-gcc/src/samples/bin/leon3/${sample_name}"
     Execute Script            ${SCRIPT}
     Set Default Uart Timeout  60
