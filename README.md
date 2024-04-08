@@ -6,11 +6,23 @@ This repository contains a script and test suite to simulate [RTEMS](https://git
 
 ## Building
 
-To test it locally, build [latest Renode version](https://github.com/renode/renode/tree/master) from GitHub repository. For build instructions, please refer to [documentation](https://renode.readthedocs.io/en/latest/advanced/building_from_sources.html).
+To test it locally, obtain Renode.
+
+On Linux, the easiest way to do it is via the [renode-run](https://github.com/antmicro/renode-run) Python package:
+
+```
+pip3 install --upgrade --user git+https://github.com/antmicro/renode-run
+renode-run download
+```
+
+Alternatively you can download a [latest nightly Renode package](https://builds.renode.io/), provided for all major OSes.
+
+You can also build the [latest Renode version](https://github.com/renode/renode/tree/master) from GitHub repository.
+For build instructions, please refer to [documentation](https://renode.readthedocs.io/en/latest/advanced/building_from_sources.html).
 
 ## Usage
 
-To start the simulation, run the following in your compiled Renode:
+To start the simulation, run Renode and type:
 
 ```
 (monitor) s @leon3_rtems.resc
@@ -21,7 +33,7 @@ This will run a RTEMS shell sample bundled with [RCC compiler](https://www.gaisl
 To run sample test cases, run the following in your console:
 
 ```
-path-to/renode/test.sh leon3_rtems.robot
+renode-run test -- leon3_rtems.robot
 ```
 
 or fork this project and observe results in GitHub Actions CI workflow.
