@@ -19,7 +19,7 @@ jobs:
           renode-version: 'latest'
           tests-to-run: 'leon3_rtems.robot'
       - name: Archive results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: test-results
           path: |
@@ -27,7 +27,7 @@ jobs:
             log.html
             robot_output.xml
       - name: Output sample binaries and PROM
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: build-artifacts
           path: |
